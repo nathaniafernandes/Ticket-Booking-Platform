@@ -26,7 +26,6 @@ This project is a multi-user ticket booking platform for booking show tickets fo
 21f1000454/
 ├── Project Report.pdf
 ├── code/
-| ├── README.md
 | ├── backend/
 | | ├── Pipfile
 | | ├── Pipfile.lock
@@ -47,7 +46,6 @@ This project is a multi-user ticket booking platform for booking show tickets fo
 | | ├──celerybeat-schedule
 | | └──dump.rdb
 | └──frontend/
-| | ├──README.md
 | | ├──frontend/
 | | | ├──public/
 | | | | ├──SAS-3.jpeg
@@ -93,7 +91,7 @@ The frontend is developed using VueJS and includes components for user interface
 3. Access the application in your web browser at `http://localhost:8080`.
 
 ## Celery & Redis 
-### (Run all of the below in WSL terminal's after creating a virtual environment using `python3 -m venv .env`, activating the virtual environment using `source .env/bin/activate` & Installing the required dependencies using `pip install -r requirements.txt`)
+(Run all of the below in WSL terminal's after creating a virtual environment using `python3 -m venv .env`, activating the virtual environment using `source .env/bin/activate` & Installing the required dependencies using `pip install -r requirements.txt`)
 1. To start redis run `redis-server`.
 2. Make necessary changes to "smtp_username" & "smtp_password" in the main.py file to run both the celery tasks.
 3. `celery -A main.celery worker` - for monthly reports.
