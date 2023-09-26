@@ -1,4 +1,4 @@
-# SaveASeat
+# SaveASeat- Ticket Booking Platform
 
 ## Table of Contents
 - [Description](#description)
