@@ -1,8 +1,75 @@
 <!DOCTYPE html>
 <html>
 <head>
-    Contents to this folder will be added post plagerism check from IIT Madras on 15th October.
+    <title>SaveASeat Monthly Show Report - {{ month_year }}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ccc;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+    </style>
 </head>
+
+<body>
+    <div class="container">
+        <h1>SaveASeat Monthly Show Report - {{ month_year }}</h1>
+        <div class="table-responsive">
+            <table class="table table-striped-columns table-bordered table align-middle">
+                <thead>
+                    <tr>
+                        <th scope="col">Sr. No</th>
+                        <th scope="col">Show Name</th>
+                        <th scope="col">Venue Name</th>
+                        <th scope="col">Location</th>
+                        <th scope="col">Rating</th>
+                        <th scope="col">Booked Seats</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for user_stat in user_stats %}
+                    <tr>
+                        <th scope="row">{{ loop.index }}</th>
+                        <td>{{ user_stat.show_name }}</td>
+                        <td>{{ user_stat.venue_name }}</td>
+                        <td>{{ user_stat.location }}</td>
+                        <td>{{ user_stat.rating }}</td>
+                        <td>{{ user_stat.booked_seats }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
 </html>
 
 
